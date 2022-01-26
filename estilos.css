@@ -16,7 +16,15 @@ body {
 	margin: auto;
 	padding: 40px 0;
 
-	
+	/* flex */
+	/* display: flex;  para que acomoden los ELEMENTOS del componentes de derecha izquierda  en fila por defecto -
+	 gap: 20px; Para que se ponga una separación entre componetes */
+
+	 /* grid */
+	 display: grid;
+	 grid-template-columns: 3fr 1fr; /* Para que defina cuanto esppacio le correspode acada elemento |, cada valor fr(fraccion )  depende de cuantos COmponenets estnes*/
+	 gap: 20px;
+
 }
 
 .titulo {
@@ -25,7 +33,17 @@ body {
 }
 
 .contenedor-conciertos {
-	
+
+	/* flex */
+	/*  width: 70%; para tomar el 70% de toral de la pantalla
+	display: flex;  para que se comoden como  fila - de derecha a izquierda
+	flex-wrap: wrap; Para que respera el wdth de los elementso hijos y nos que no entres los desplaza hahcia abajo
+	gap: 20px; */
+
+	/* grid */
+	display: grid;
+	 grid-template-columns:repeat(3, 1fr);  /* = 1fr 1fr 1fr; */
+	 gap: 20px
 }
 
 .card {
@@ -38,13 +56,23 @@ body {
 	background-size: cover;
 	background-position: center center;
 
+	/* flex */
+	/* width: calc(33.33% - 20px) ; par qe exietnat los 3 elementos */
 	
 }
 
 .card .textos {
-	height: 100%;
 	
 	
+	/* flex */
+	display: flex;
+	flex-direction: column; /*  columna | */
+	justify-content:space-between; /* tendrán espacio entre ellos. []  []  [] */
+	height: 100%;  /* si no se pone, no ve el justify-content */ 
+
+	/* Grid */
+	 /*display: grid;
+	grid-template-rows: 1fr auto;- el primer elmenteo toma todo 1fr(1fraccion =100%) y el otro solo el tamanio que necesite*/
 }
 
 .banner {
@@ -54,6 +82,16 @@ body {
 	background-size: cover;
 	background-position: center center;
 
+	
+	/* flex */
+	display: flex;
+	flex-direction: column;  /* columna | */
+	justify-content: space-between; /* tendrán espacio entre ellos. []  []  [] */
+
+	/* grid */
+	/* display: grid;
+	grid-template-rows: auto auto auto;
+	align-items: center; */
 
 }
 
